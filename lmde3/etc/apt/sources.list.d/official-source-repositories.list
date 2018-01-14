@@ -1,0 +1,6 @@
+deb-src http://packages.linuxmint.com cindy main upstream import backport
+
+deb-src http://deb.debian.org/debian stretch main contrib non-free
+deb-src http://deb.debian.org/debian stretch-updates main contrib non-free
+
+deb-src http://security.debian.org/ stretch/updates main contrib non-free
