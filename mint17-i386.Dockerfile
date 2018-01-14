@@ -5,7 +5,7 @@ FROM i386/ubuntu:14.04
 ENV DEBIAN_FRONTEND noninteractive
 
 # Add basic tools
-RUN apt-get update && apt-get --yes install wget
+RUN apt-get update && apt-get --yes install wget gnupg
 
 # Add files.
 ADD mint17 /
