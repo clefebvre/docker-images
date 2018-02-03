@@ -8,9 +8,8 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get --yes install wget gnupg locales unzip
 
 # Set locale
-RUN \
-   echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen \
-&& locale-gen
+RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+RUN locale-gen
 
 # Add GHR
 RUN \
