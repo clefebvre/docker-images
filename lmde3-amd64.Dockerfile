@@ -10,6 +10,9 @@ RUN apt-get update && apt-get --yes install wget gnupg locales unzip
 # Set locale
 RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 RUN locale-gen
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
 
 # Add GHR
 RUN \
