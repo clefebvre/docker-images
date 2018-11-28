@@ -28,6 +28,18 @@ with open("mint19-i386.Dockerfile", "w") as docker_file:
     command = ["sed", "-e", "s/@DOCKER_IMAGE@/%s/" % image, "-e", "s/@FILES@/%s/" % files, "-e", "s/@KEYRING@/%s/" % keyring, "-e", "s/@PACKAGES@/%s/" % packages, "template.Dockerfile"]
     subprocess.call(command, stdout=docker_file)
 
+with open("mint19.1-amd64.Dockerfile", "w") as docker_file:
+    files = "mint19.1"
+    image = "ubuntu:18.04"
+    command = ["sed", "-e", "s/@DOCKER_IMAGE@/%s/" % image, "-e", "s/@FILES@/%s/" % files, "-e", "s/@KEYRING@/%s/" % keyring, "-e", "s/@PACKAGES@/%s/" % packages, "template.Dockerfile"]
+    subprocess.call(command, stdout=docker_file)
+
+with open("mint19.1-i386.Dockerfile", "w") as docker_file:
+    files = "mint19.1"
+    image = "i386\/ubuntu:18.04"
+    command = ["sed", "-e", "s/@DOCKER_IMAGE@/%s/" % image, "-e", "s/@FILES@/%s/" % files, "-e", "s/@KEYRING@/%s/" % keyring, "-e", "s/@PACKAGES@/%s/" % packages, "template.Dockerfile"]
+    subprocess.call(command, stdout=docker_file)
+
 with open("lmde3-amd64.Dockerfile", "w") as docker_file:
     files = "lmde3"
     image = "debian:stretch"
