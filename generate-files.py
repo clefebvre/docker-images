@@ -52,6 +52,30 @@ with open("mint19.2-i386.Dockerfile", "w") as docker_file:
     command = ["sed", "-e", "s/@DOCKER_IMAGE@/%s/" % image, "-e", "s/@FILES@/%s/" % files, "-e", "s/@KEYRING@/%s/" % keyring, "-e", "s/@PACKAGES@/%s/" % packages, "template.Dockerfile"]
     subprocess.call(command, stdout=docker_file)
 
+with open("mint19.3-amd64.Dockerfile", "w") as docker_file:
+    files = "mint19.3"
+    image = "ubuntu:18.04"
+    command = ["sed", "-e", "s/@DOCKER_IMAGE@/%s/" % image, "-e", "s/@FILES@/%s/" % files, "-e", "s/@KEYRING@/%s/" % keyring, "-e", "s/@PACKAGES@/%s/" % packages, "template.Dockerfile"]
+    subprocess.call(command, stdout=docker_file)
+
+with open("mint19.3-i386.Dockerfile", "w") as docker_file:
+    files = "mint19.3"
+    image = "i386\/ubuntu:18.04"
+    command = ["sed", "-e", "s/@DOCKER_IMAGE@/%s/" % image, "-e", "s/@FILES@/%s/" % files, "-e", "s/@KEYRING@/%s/" % keyring, "-e", "s/@PACKAGES@/%s/" % packages, "template.Dockerfile"]
+    subprocess.call(command, stdout=docker_file)
+
+with open("lmde4-amd64.Dockerfile", "w") as docker_file:
+    files = "lmde4"
+    image = "debian:buster"
+    command = ["sed", "-e", "s/@DOCKER_IMAGE@/%s/" % image, "-e", "s/@FILES@/%s/" % files, "-e", "s/@KEYRING@/%s/" % keyring, "-e", "s/@PACKAGES@/%s/" % packages, "template.Dockerfile"]
+    subprocess.call(command, stdout=docker_file)
+
+with open("lmde4-i386.Dockerfile", "w") as docker_file:
+    files = "lmde4"
+    image = "i386\/debian:buster"
+    command = ["sed", "-e", "s/@DOCKER_IMAGE@/%s/" % image, "-e", "s/@FILES@/%s/" % files, "-e", "s/@KEYRING@/%s/" % keyring, "-e", "s/@PACKAGES@/%s/" % packages, "template.Dockerfile"]
+    subprocess.call(command, stdout=docker_file)
+
 with open("lmde3-amd64.Dockerfile", "w") as docker_file:
     files = "lmde3"
     image = "debian:stretch"
