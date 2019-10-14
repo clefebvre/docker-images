@@ -1,4 +1,4 @@
-deb-src http://packages.linuxmint.com trina main upstream import backport
+deb-src http://packages.linuxmint.com tricia main upstream import backport
 
 deb-src http://archive.ubuntu.com/ubuntu bionic main restricted universe multiverse
 deb-src http://archive.ubuntu.com/ubuntu bionic-updates main restricted universe multiverse
