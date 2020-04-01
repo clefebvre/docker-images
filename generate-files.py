@@ -3,6 +3,7 @@ import subprocess
 
 keyring = "2016.05.26"
 packages = "mint-dev-tools build-essential devscripts fakeroot quilt dh-make automake libdistro-info-perl less nano ubuntu-dev-tools python python2.7 python3"
+new_packages = "mint-dev-tools build-essential devscripts fakeroot quilt dh-make automake libdistro-info-perl less nano ubuntu-dev-tools python3"
 
 with open("mint18-amd64.Dockerfile", "w") as docker_file:
     files = "mint18"
@@ -67,7 +68,7 @@ with open("mint19.3-i386.Dockerfile", "w") as docker_file:
 with open("mint20-amd64.Dockerfile", "w") as docker_file:
     files = "mint20"
     image = "ubuntu:20.04"
-    command = ["sed", "-e", "s/@DOCKER_IMAGE@/%s/" % image, "-e", "s/@FILES@/%s/" % files, "-e", "s/@KEYRING@/%s/" % keyring, "-e", "s/@PACKAGES@/%s/" % packages, "template.Dockerfile"]
+    command = ["sed", "-e", "s/@DOCKER_IMAGE@/%s/" % image, "-e", "s/@FILES@/%s/" % files, "-e", "s/@KEYRING@/%s/" % keyring, "-e", "s/@PACKAGES@/%s/" % new_packages, "template.Dockerfile"]
     subprocess.call(command, stdout=docker_file)
 
 with open("lmde4-amd64.Dockerfile", "w") as docker_file:
