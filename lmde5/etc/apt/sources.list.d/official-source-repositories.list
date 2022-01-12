@@ -1,0 +1,7 @@
+deb-src http://packages.linuxmint.com elsie main upstream import backport #id:linuxmint_main
+
+deb-src https://deb.debian.org/debian bullseye main contrib non-free
+deb-src https://deb.debian.org/debian bullseye-updates main contrib non-free
+deb-src http://security.debian.org bullseye-security main contrib non-free
+
+deb-src https://deb.debian.org/debian bullseye-backports main contrib non-free
