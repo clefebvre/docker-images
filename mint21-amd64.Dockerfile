@@ -1,5 +1,5 @@
 # Pull base image.
-FROM i386/debian:bullseye
+FROM ubuntu:22.04
 
 # Make sure APT operations are non-interactive
 ENV DEBIAN_FRONTEND noninteractive
@@ -22,7 +22,7 @@ RUN \
 && rm ghr_v0.5.4_linux_amd64.zip
 
 # Add files.
-ADD lmde5 /
+ADD mint21 /
 
 ###################################
 # Set up repositories

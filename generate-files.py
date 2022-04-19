@@ -89,6 +89,12 @@ with open("mint20.3-amd64.Dockerfile", "w") as docker_file:
     command = ["sed", "-e", "s/@DOCKER_IMAGE@/%s/" % image, "-e", "s/@FILES@/%s/" % files, "-e", "s/@KEYRING@/%s/" % keyring, "-e", "s/@PACKAGES@/%s/" % new_packages, "template.Dockerfile"]
     subprocess.call(command, stdout=docker_file)
 
+with open("mint21-amd64.Dockerfile", "w") as docker_file:
+    files = "mint21"
+    image = "ubuntu:22.04"
+    command = ["sed", "-e", "s/@DOCKER_IMAGE@/%s/" % image, "-e", "s/@FILES@/%s/" % files, "-e", "s/@KEYRING@/%s/" % keyring, "-e", "s/@PACKAGES@/%s/" % new_packages, "template.Dockerfile"]
+    subprocess.call(command, stdout=docker_file)
+
 with open("lmde5-amd64.Dockerfile", "w") as docker_file:
     files = "lmde5"
     image = "debian:bullseye"

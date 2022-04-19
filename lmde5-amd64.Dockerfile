@@ -50,4 +50,4 @@ RUN apt-get dist-upgrade --yes
 # Install stuff
 ###################################
 
-RUN apt-get --yes install mint-dev-tools build-essential devscripts fakeroot quilt dh-make automake libdistro-info-perl less nano ubuntu-dev-tools python python2.7 python3
+RUN apt-get --yes install mint-dev-tools build-essential devscripts fakeroot quilt dh-make automake libdistro-info-perl less nano ubuntu-dev-tools python3
