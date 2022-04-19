@@ -5,7 +5,8 @@ FROM ubuntu:22.04
 ENV DEBIAN_FRONTEND noninteractive
 
 # Add basic tools
-RUN apt-get update && apt-get --yes install wget gnupg locales unzip libfile-fcntllock-perl
+RUN apt-get update
+RUN apt-get --yes install wget gnupg locales unzip libfile-fcntllock-perl
 
 # Set locale
 RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
