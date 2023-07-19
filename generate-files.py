@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import subprocess
 
-keyring = "2016.05.26"
+keyring = "2022.06.21"
 packages = "mint-dev-tools build-essential devscripts fakeroot quilt dh-make automake libdistro-info-perl less nano ubuntu-dev-tools python python2.7 python3"
 new_packages = "mint-dev-tools build-essential devscripts fakeroot quilt dh-make automake libdistro-info-perl less nano ubuntu-dev-tools python3"
 
@@ -92,6 +92,18 @@ with open("mint20.3-amd64.Dockerfile", "w") as docker_file:
 with open("mint21-amd64.Dockerfile", "w") as docker_file:
     files = "mint21"
     image = "ubuntu:22.04"
+    command = ["sed", "-e", "s/@DOCKER_IMAGE@/%s/" % image, "-e", "s/@FILES@/%s/" % files, "-e", "s/@KEYRING@/%s/" % keyring, "-e", "s/@PACKAGES@/%s/" % new_packages, "template.Dockerfile"]
+    subprocess.call(command, stdout=docker_file)
+
+with open("lmde6-amd64.Dockerfile", "w") as docker_file:
+    files = "lmde6"
+    image = "debian:bookworm"
+    command = ["sed", "-e", "s/@DOCKER_IMAGE@/%s/" % image, "-e", "s/@FILES@/%s/" % files, "-e", "s/@KEYRING@/%s/" % keyring, "-e", "s/@PACKAGES@/%s/" % new_packages, "template.Dockerfile"]
+    subprocess.call(command, stdout=docker_file)
+
+with open("lmde6-i386.Dockerfile", "w") as docker_file:
+    files = "lmde6"
+    image = "i386\/debian:bookworm"
     command = ["sed", "-e", "s/@DOCKER_IMAGE@/%s/" % image, "-e", "s/@FILES@/%s/" % files, "-e", "s/@KEYRING@/%s/" % keyring, "-e", "s/@PACKAGES@/%s/" % new_packages, "template.Dockerfile"]
     subprocess.call(command, stdout=docker_file)
 
