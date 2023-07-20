@@ -34,8 +34,8 @@ RUN \
 && dpkg -i linuxmint-keyring_2022.06.21_all.deb \
 && rm linuxmint-keyring_2022.06.21_all.deb
 
-# Empty default sources.list
-RUN echo "" > /etc/apt/sources.list
+# Remove default APT sources
+RUN rm -f /etc/apt/sources.list.d/debian.sources
 
 # Update APT cache.
 RUN apt-get update

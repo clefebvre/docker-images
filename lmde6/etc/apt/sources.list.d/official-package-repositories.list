@@ -1,7 +1,0 @@
-deb http://packages.linuxmint.com faye main upstream import backport #id:linuxmint_main
-
-deb https://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
-deb https://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
-deb http://security.debian.org bookworm-security main contrib non-free non-free-firmware
-
-deb https://deb.debian.org/debian bookworm-backports main contrib non-free non-free-firmware
