@@ -1,0 +1,7 @@
+deb-src http://packages.linuxmint.com wilma main upstream import backport
+
+deb-src http://archive.ubuntu.com/ubuntu noble main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu noble-updates main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu noble-backports main restricted universe multiverse
+
+deb-src http://security.ubuntu.com/ubuntu/ noble-security main restricted universe multiverse
