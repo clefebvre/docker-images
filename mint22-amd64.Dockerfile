@@ -37,6 +37,7 @@ RUN \
 
 # Empty default sources.list
 RUN echo "" > /etc/apt/sources.list
+RUN rm -rf /etc/apt/sources.list.d/ubuntu.sources
 
 # Update APT cache.
 RUN apt-get update
