@@ -1,0 +1,20 @@
+Types: deb
+X-Repolib-Name: Debian
+URIs: http://deb.debian.org/debian
+Suites: trixie trixie-updates trixie-backports
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+Types: deb
+X-Repolib-Name: Debian Security
+URIs: http://deb.debian.org/debian-security
+Suites: trixie-security
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+Types: deb
+X-Repolib-Name: Linux Mint
+URIs: http://packages.linuxmint.com
+Suites: gigi
+Components: main upstream import backport
+Signed-By: /etc/apt/trusted.gpg.d/linuxmint-keyring.gpg
